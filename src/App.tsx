@@ -7,7 +7,7 @@ function App() {
         <div className="App">
             Core UI
             <Highlight label="Text example" color="red"/>
-            <Button label="Button example" onClick={() => console.log("example")}/>
+            <Button prefix="Prefix" label="Button example" onClick={() => console.log("example")}/>
         </div>
     );
 }
