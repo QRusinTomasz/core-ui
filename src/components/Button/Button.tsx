@@ -3,9 +3,10 @@ import React, {MouseEventHandler} from 'react';
 interface ButtonProps {
     label: string,
     onClick: MouseEventHandler<HTMLButtonElement>
+    prefix: string
 }
 
-export const Button = ({label, onClick}: ButtonProps) => {
+export const Button = ({label, onClick, prefix}: ButtonProps) => {
     return (
         <button onClick={onClick}
                 style={{
@@ -16,6 +17,7 @@ export const Button = ({label, onClick}: ButtonProps) => {
                     color: 'white',
                     marginTop: '20px'
                 }}>
+            {prefix}
             {label}
         </button>
     );
