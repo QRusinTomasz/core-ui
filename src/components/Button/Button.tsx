@@ -4,9 +4,10 @@ interface ButtonProps {
     label: string,
     onClick: MouseEventHandler<HTMLButtonElement>
     prefix: string
+    suffix: string
 }
 
-export const Button = ({label, onClick, prefix}: ButtonProps) => {
+export const Button = ({label, onClick, prefix, suffix}: ButtonProps) => {
     return (
         <button onClick={onClick}
                 style={{
@@ -19,6 +20,7 @@ export const Button = ({label, onClick, prefix}: ButtonProps) => {
                 }}>
             {prefix}
             {label}
+            {suffix}
         </button>
     );
 };
